@@ -43,8 +43,6 @@ def main():
         load_milch_data()
     elif selected_tab == "Outlook: What did we gain?":
         load_milch_forecast()
-    elif selected_tab == "What did we learn?":
-        bullet_points()
 
 def load_home():
     st.title("Intuition Unit Root")
@@ -356,28 +354,15 @@ def load_milch_forecast():
     
     st.plotly_chart(fig)
 
-def bullet_points():
-    st.title("Learning Goals")
-    
-    st.markdown("""
-    Sie können…
-    - die **Allgegenwärtigkeit** von Zeitreihen erkennen,
-    - zwei **Stationaritätskonzepte** differenzieren,
-    - Aspekte der **fundamentalen Rolle der Stationarität** für Zeitreihen wiedergeben,
-    - eine Zeitreihe **visuell auf Nicht-Stationarität** prüfen,
-    - **Nicht-Stationaritätskomponenten** identifizieren und differenzieren,
-    - zwei Methoden zum **Umgang mit Nicht-Stationarität** benennen.
-    """)
-
 def wiederholung():
     st.title("Overview")
     
     st.markdown("""
-    Wir unterscheiden diese Komponenten / Ursachen von Nicht-Stationarität
-    - Vorhandensein eines **Trends** in der Zeitreihe (z.B. linear, nichtlinear, steigend, fallend, ...),
-    - **Saisonale Muster**, die sich in regelmäßigen Abständen wiederholen,
-    - **Heteroskedastizität**, bei der die Varianz sich über die Zeit ändern kann,
-    - Vorhandensein einer **Einheitswurzel**.
+    We distinguish between these components / causes of non-stationarity
+    - Existence of a **trend** in the time series (e.g. linear, non-linear, rising, falling, ...),
+    - **Seasonal patterns** that are repeated at regular intervals,
+    - **Heteroscedasticity**, where the variance can change over time,
+    - Presence of a **unit root**.
     """)
 
 if __name__ == "__main__":
